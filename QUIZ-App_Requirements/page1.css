@@ -49,6 +49,7 @@ li {
   font-weight: 600;
 }
 footer {
+<<<<<<< Updated upstream
   margin-left: 80px;
 }
 .fa-regular fa-square {
@@ -60,5 +61,17 @@ footer {
 }
 .parfooter {
   color: white;
+=======
+  display: inline-block;
+  color: white;
+  margin-left: 80px;
+  font-weight: 600;
+}
+input {
+  display: inline-block;
+  margin-right: 3px;
+}
+.footpara {
+>>>>>>> Stashed changes
   display: inline-block;
 }
