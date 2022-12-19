@@ -51,7 +51,7 @@ li {
 footer {
   margin-left: 80px;
 }
-.fa-regular fa-square {
+.fa-square:before {
   color: white;
   display: inline-block;
 }
@@ -61,4 +61,10 @@ footer {
 .parfooter {
   color: white;
   display: inline-block;
+}
+.bottonefoot:hover {
+  box-shadow: #00ffff 0 0 20px;
+}
+.bottonefoot {
+  background-color: #00ffff;
 }
