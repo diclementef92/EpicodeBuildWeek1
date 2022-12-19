@@ -48,3 +48,17 @@ li {
   color: white;
   font-weight: 600;
 }
+footer {
+  margin-left: 80px;
+}
+.fa-regular fa-square {
+  color: white;
+  display: inline-block;
+}
+.divfooter {
+  display: inline-block;
+}
+.parfooter {
+  color: white;
+  display: inline-block;
+}
