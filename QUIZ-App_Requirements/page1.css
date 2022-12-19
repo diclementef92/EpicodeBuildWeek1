@@ -1,0 +1,31 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.imgsfondo {
+  background-image: url(../assets/bg.jpg);
+  background-size: cover;
+  width: 100%;
+}
+.imglogo {
+  width: 150px;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.titolo {
+  padding-top: 10px;
+}
+h1 {
+  color: white;
+  margin-left: 80px;
+  font-size: 4em;
+}
+.spanTit {
+  font-weight: lighter;
+  padding-left: 5px;
+}
+h2 {
+  margin-left: 80px;
+  font-size: 2em;
+  color: #bc128a;
+  font-weight: 600;
+}
