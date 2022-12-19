@@ -49,10 +49,9 @@ li {
   font-weight: 600;
 }
 footer {
-<<<<<<< Updated upstream
   margin-left: 80px;
 }
-.fa-regular fa-square {
+.fa-square:before {
   color: white;
   display: inline-block;
 }
@@ -61,17 +60,19 @@ footer {
 }
 .parfooter {
   color: white;
-=======
   display: inline-block;
-  color: white;
-  margin-left: 80px;
+}
+.bottonefoot:hover {
+  box-shadow: #00ffff 0 0 20px;
+}
+.bottonefoot {
+  background-color: #00ffff;
+  border: 0px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 100px;
+}
+h3 {
   font-weight: 600;
-}
-input {
-  display: inline-block;
-  margin-right: 3px;
-}
-.footpara {
->>>>>>> Stashed changes
-  display: inline-block;
 }
