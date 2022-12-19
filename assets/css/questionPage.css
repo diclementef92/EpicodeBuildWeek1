@@ -37,9 +37,13 @@ header .logo {
   text-align: center;
   width: 60%;
   margin: 10px auto 10px auto;
+  border: white solid 1px;
 }
 .option {
-  border: white;
+  border: white solid 1px;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 60px;
 }
 footer {
   color: white;
