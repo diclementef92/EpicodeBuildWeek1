@@ -67,4 +67,12 @@ footer {
 }
 .bottonefoot {
   background-color: #00ffff;
+  border: 0px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 100px;
+}
+h3 {
+  font-weight: 600;
 }
