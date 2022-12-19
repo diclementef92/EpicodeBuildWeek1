@@ -21,29 +21,30 @@ header .logo {
 }
 .titolo {
   color: white;
+  font-size: 70px;
   font-weight: normal;
   text-align: center;
   margin-top: 100px;
   font-family: "Outfit", sans-serif;
 }
+
 .titolo span {
-  font-weight: bold;
+  font-weight: 900;
 }
 /* Container */
-/* font-family: 'Inter', sans-serif; */
 .options {
   color: white;
   font-family: "Inter", sans-serif;
-  text-align: center;
-  width: 60%;
-  margin: 10px auto 10px auto;
-  border: white solid 1px;
+  width: 80%;
+  margin: 10% auto 10px auto;
 }
 .option {
-  border: white solid 1px;
-  border-radius: 20px;
-  padding: 10px;
-  margin: 60px;
+  text-align: center;
+  border: whitesmoke solid 3px;
+  border-radius: 102px;
+  padding: 40px;
+  margin: 20px;
+  background-color: rgba(192, 192, 192, 0.1);
 }
 footer {
   color: white;
