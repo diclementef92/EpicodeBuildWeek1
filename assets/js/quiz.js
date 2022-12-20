@@ -116,8 +116,12 @@ window.onload = function () {
   // Quando l'utente seleziona una risposta, passa alla domanda successiva dell'array e sostituisci quella precedentemente visualizzata
   // con quella corrente,
   // salvando le risposte dell'utente in una variabile
+  let options = document.querySelectorAll("option");
+  options.forEach((option) => {option.onclick = handleAnswer}));
 };
-
+const handleAnswer = function (e) {
+  console.log("hai cliccato", e);
+};
 // Come calcolare il risultato? Hai due strade:
 // Se stai mostrando tutte le domande nello stesso momento, controlla semplicemente se i radio button selezionati sono === correct_answer
 // Se stai mostrando una domanda alla volta, aggiungi semplicemente un punto alla variabile del punteggio che hai precedentemente creato SE la risposta selezionata è === correct_answer
