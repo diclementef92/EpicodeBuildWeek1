@@ -1,19 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
   background: url(../img/bg.jpg);
   width: 100%;
   background-size: cover;
   color: white;
-  font-family: "Open Sans", sans-serif;
-  z-index: 5;
+  font-family: 'Inter', sans-serif;
 }
+
 span.bold {
   font-weight: bold;
 }
 
 header div.logo {
-  width: 10%;
+  width: 15%;
   padding: 2% 8% 0;
 }
 
@@ -26,6 +26,7 @@ header div h1 {
   text-align: center;
   font-weight: bold;
   margin: 0;
+  font-family: 'Outfit', sans-serif;
 }
 
 header div h2 {
@@ -33,6 +34,7 @@ header div h2 {
   text-align: center;
   font-weight: 400;
   margin: 0 0 2%;
+  font-family: 'Outfit', sans-serif;
 }
 
 main div.container div.inlineBox {
@@ -40,7 +42,6 @@ main div.container div.inlineBox {
   width: 20%;
   height: 45vh;
   position: relative;
-  z-index: 5;
 }
 
 main div.container div.central {
@@ -48,97 +49,131 @@ main div.container div.central {
   width: 59%;
   height: 50vh;
   position: relative;
-  z-index: 5;
-  overflow: visible;
 }
 
-main div.container div.central .cake {
-    background: aqua;
-    height: 350px;
-  width: 350px;
-  position: absolute;
-  font-size: 3em;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50% 50%;
-  box-shadow: 0px 0px 15px black;
-  z-index: 5;
-}
-
-/* div.fullscreen {
-    width: 100vw;
-    height: 100%;
-    background: url(../img/bg.jpg);
-  z-index: 0;
-  position: absolute;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
-
-div.fullscreen .innerCircle {
-  position: absolute;
-  text-align: center;
-  font-size: 3em;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1em;
+main div.container div.central .cake div.color2 {
+  z-index: 1;
+  border: 8vh solid;
+  border-radius: 50%;
+  border-color: #D20094 #D20094 transparent transparent ;
+  transform:rotate(-30deg);
   height: 250px;
   width: 250px;
-  border-radius: 50% 50%;
-  box-shadow: 0px 0px 15px black;
-  z-index: 5;
-}
-
-main div.container div.central .innerCircle p{
-    top: 20%; 
-}
-
-main div.container div.inlineBox p {
   position: absolute;
-  z-index: 5;
+  right: 0;
+  border-radius: 50%;
+  right: 30%;
+  box-shadow:0 0 15px black, inset 0 0 10px black;
+}
+
+main div.container div.central .cake div.color1 {
+  z-index: 2;
+  border: 8vh solid;
+  border-radius: 50%;
+  border-color: transparent #00ffff #00ffff transparent;
+  transform:rotate(135deg);
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  right: 30%;
+  box-shadow:0 0 15px black, inset 0 0 10px black;
+}
+
+main div.container div.central .cake div.color3 {
+  z-index: 0;
+  border: 8vh solid;
+  border-radius: 50%;
+  border-color: #00ffff;
+  transform:rotate(135deg);
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  right: 30%;
+  box-shadow:0 0 15px black, inset 0 0 10px black;
+}
+
+main div.container div.central div.innerCircle {
+  position: absolute;
+  text-align: center;
+  font-size: 0.8em;
+  top: 65%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  height: 250px;
+  width: 30%;
+}
+
+main div.container div.central div.innerCircle h4.congSubtitle {
+  position: absolute;
+  font-size: 1.2em;
+  right: 37%;
+}
+
+main div.container div.central div.innerCircle span.blue {
+  color: aqua;
+}
+
+main div.container div.central div.innerCircle p {
+  font-size: 0.9em;
+  width: 60%;  
+  position: absolute;
+  top: 30%;
 }
 
 main div.container div.inlineBox p.percent {
-  text-align: left;
+  position: absolute;
   font-size: 3em;
-  top: 30%;
-  left: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
+  padding: 0;
 }
 
-main div.container div.inlineBox p.question {
+main div.container div.alignLeft p.percent {
+  left: 100%;
+}
+
+main div.container div.inlineBox span.question {
+  font-size: 0.4em;
+  font-weight: 400;
+}
+
+main div.container div.alignLeft {
   text-align: left;
-  font-size: 1em;
-  font-weight: lighter;
-  top: 60%;
-  left: 35%;
-  transform: translate(-50%, -50%);
+}
+
+main div.container div.alignRight {
+  text-align: right;
 }
 
 footer {
   position: relative;
   height: 20vh;
-  z-index: 5;
 }
 
 footer div.button {
   position: absolute;
   top: 50%;
-  left: 47%;
+  left: 44%;
   transform: translate(-50%, -50%);
-  z-index: 1;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 footer div.button p {
   border: solid 1px white;
   display: inline-block;
   font-weight: bold;
+  color: white;
   font-size: 2em;
   width: 100%;
   padding: 8% 60%;
+}
+
+footer div.button p:hover {
   box-shadow: 0px 0px 20px #3195e27c;
 }
