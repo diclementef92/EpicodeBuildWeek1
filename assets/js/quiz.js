@@ -101,6 +101,11 @@ const questions = [
 //   risposte_totale: 20
 //   punteggio: 12
 // }
+const answers = {
+  correct_answers: 0,
+  questions: questions.length,
+  punteggio: 0,
+};
 
 window.onload = function () {
   // TIPS:
@@ -116,12 +121,96 @@ window.onload = function () {
   // Quando l'utente seleziona una risposta, passa alla domanda successiva dell'array e sostituisci quella precedentemente visualizzata
   // con quella corrente,
   // salvando le risposte dell'utente in una variabile
-  let options = document.querySelectorAll("option");
-  options.forEach((option) => {option.onclick = handleAnswer}));
+
+  let totalQuestionNumber = document.querySelector(".question-tot");
+  totalQuestionNumber.innerText = " / " + questions.length;
+
+  let questionIndex = 0;
+  //calcola numero intero casuale da 0 a max escluso [0,max)
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  //passaggio alla pagina successiva
+  const gotoResultsPage = function () {
+    window.location.assign(
+      "./prova.html?correct_answers=" +
+        answers.correct_answers +
+        "&tot_questions=" +
+        answers.questions
+    );
+  };
+
+  //caricamento e visualizzazione domanda (question) e opzioni (options)
+  const newQuestion = function (index) {
+    const optionsNodes = document.querySelectorAll(".option");
+    const question = document.querySelector(".titolo");
+    const questionText = questions[index].question;
+    let options = [];
+
+    if (questions[index].type !== "boolean") {
+      options = questions[index].incorrect_answers;
+      let optionCorrect = questions[index].correct_answer;
+      let randomIndex = getRandomInt(options.length); //lenght va da 2 a 4 -> random va da 0 a 3
+      options.splice(randomIndex, 0, optionCorrect); // aggiungo la risposta corretta ad un indice casuale
+      // console.log(options);
+    } else {
+      options = ["True", "False"];
+    }
+    optionsNodes.forEach((option, i) => {
+      question.innerHTML = questionText;
+      if (options[i]) {
+        //rendo visibile elemento option
+        option.style.cssText = "visibility: visible";
+        option.innerText = options[i];
+      } else {
+        //rendo nascosto elemento option
+        option.style.cssText = "visibility: hidden";
+      }
+      option.onclick = handleAnswer;
+    });
+
+    //aggiorna question number
+    let questionNumber = document.querySelector(".question-num");
+    questionNumber.innerText = index + 1;
+  };
+
+  const handleAnswer = function (e) {
+    // console.log("hai cliccato", e.srcElement.innerText);
+    /* se risposta corretta è uguale a quella cliccata*/
+    if (e.srcElement.innerText === questions[questionIndex].correct_answer) {
+      answers.correct_answers++;
+      answers.punteggio++;
+    }
+    questionIndex++;
+
+    //se ci sono ancora domande
+    if (questionIndex < questions.length) {
+      newQuestion(questionIndex);
+    } else {
+      //altrimenti
+      gotoResultsPage();
+      console.log(answers);
+    }
+  };
+  newQuestion(0);
+
+  //// stelle
+  // let stelle = document.querySelectorAll(".stelle i");
+  // stelle.forEach((stella,i) => {
+  //   stella.onmouseover = () => {
+  //     stella.style.cssText = "color: aqua;";
+  //
+  //   };
+  //   stella.onmouseleave = () => {
+  //     stella.style.cssText = "";
+  //   };
+  // });
+  ////
+
+  // fine window.onLoad()
 };
-const handleAnswer = function (e) {
-  console.log("hai cliccato", e);
-};
+
 // Come calcolare il risultato? Hai due strade:
 // Se stai mostrando tutte le domande nello stesso momento, controlla semplicemente se i radio button selezionati sono === correct_answer
 // Se stai mostrando una domanda alla volta, aggiungi semplicemente un punto alla variabile del punteggio che hai precedentemente creato SE la risposta selezionata è === correct_answer
