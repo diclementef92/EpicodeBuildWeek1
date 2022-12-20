@@ -1,4 +1,4 @@
-.img-sfondo {
+body {
   background-image: url(../img/bg.jpg);
   background-size: cover;
   width: 100%;
@@ -34,7 +34,7 @@
   margin-left: 10px;
 }
 .votazione img:hover {
-  border: #00ffff solid;
+  fill: black;
 }
 input {
   border: none;
@@ -42,6 +42,9 @@ input {
   background-color: transparent;
   color: white;
   padding-top: 20px;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-bottom: 10px;
 }
 ::-moz-placeholder {
   color: gray;
@@ -49,7 +52,7 @@ input {
 }
 
 footer {
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 100px;
 }
 button {
