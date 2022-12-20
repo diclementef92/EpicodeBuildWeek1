@@ -93,6 +93,14 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
+// questions {
+//  corretta: boolean ;
+// }
+// answers {
+//   risposte_corrette: 12
+//   risposte_totale: 20
+//   punteggio: 12
+// }
 
 window.onload = function () {
   // TIPS:
@@ -105,7 +113,8 @@ window.onload = function () {
   //
   // SE MOSTRI UNA DOMANDA ALLA VOLTA:
   // Mostra la prima domanda con il testo e i radio button.
-  // Quando l'utente seleziona una risposta, passa alla domanda successiva dell'array e sostituisci quella precedentemente visualizzata con quella corrente,
+  // Quando l'utente seleziona una risposta, passa alla domanda successiva dell'array e sostituisci quella precedentemente visualizzata
+  // con quella corrente,
   // salvando le risposte dell'utente in una variabile
 };
 
