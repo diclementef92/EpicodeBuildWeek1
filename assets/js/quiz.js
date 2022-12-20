@@ -141,6 +141,14 @@ window.onload = function () {
     );
   };
 
+  //set timer
+  let counter = 60;
+  const myTimer = function () {
+    const timer = document.querySelector(".timer");
+    timer.innerText = counter--;
+  };
+  window.setInterval(myTimer, 1000);
+
   //caricamento e visualizzazione domanda (question) e opzioni (options)
   const newQuestion = function (index) {
     const optionsNodes = document.querySelectorAll(".option");
@@ -207,10 +215,20 @@ window.onload = function () {
   //   };
   // });
   ////
+  //ester-egg
 
   // fine window.onLoad()
 };
 
+//cat-img
+const clickLogo = function () {
+  const logo = document.querySelector(".logo");
+  const img = document.createElement("img");
+  img.src = "./assets/img/cat.webp";
+  img.style.width = "50px";
+  img.style.display = "right";
+  logo.appendChild(img);
+};
 // Come calcolare il risultato? Hai due strade:
 // Se stai mostrando tutte le domande nello stesso momento, controlla semplicemente se i radio button selezionati sono === correct_answer
 // Se stai mostrando una domanda alla volta, aggiungi semplicemente un punto alla variabile del punteggio che hai precedentemente creato SE la risposta selezionata è === correct_answer

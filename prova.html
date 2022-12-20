@@ -9,12 +9,20 @@
 </head>
 
 <body>
-    <span>
+    <!-- <img src="https://www.webboh.it/wp-content/uploads/2021/02/donna-tiktok-758x426.jpg" alt="fanelli"> -->
+    <span></span>
 
-    </span>
     <script>
         let params = new URLSearchParams(location.search);
         console.log(params.get("correct_answers"));
+
+        window.setInterval(timer, 1000);
+        let count = 60;
+
+        function timer() {
+            let span = document.querySelector("span")
+            span.innerText = count--;
+        }
     </script>
 </body>
 
