@@ -36,7 +36,7 @@ header .logo {
   color: white;
   font-family: "Inter", sans-serif;
   width: 80%;
-  margin: 10% auto 10px auto;
+  margin: 10% auto 10% auto;
 }
 .option {
   text-align: center;
@@ -46,10 +46,12 @@ header .logo {
   margin: 20px;
   background-color: rgba(192, 192, 192, 0.1);
 }
+.option:hover {
+  background-color: #d20094;
+}
 footer {
   color: white;
   text-align: center;
-  margin-top: 30%;
   font-family: "Outfit", sans-serif;
   font-size: large;
 }
