@@ -52,10 +52,6 @@ li {
 footer {
   margin-left: 80px;
 }
-.fa-square:before {
-  color: white;
-  display: inline-block;
-}
 .divfooter {
   display: inline-block;
 }
@@ -87,4 +83,31 @@ h3 {
 }
 .attacco {
   text-decoration: none;
+}
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.checkbox__input {
+  display: none;
+}
+.checkbox__box {
+  width: 13px;
+  height: 13px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 10px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.checkbox__box::after {
+  content: "\2714";
+  color: white;
+  transform: scale(0);
+}
+.checkbox__input:checked + .checkbox__box::after {
+  transform: scale(1);
 }
