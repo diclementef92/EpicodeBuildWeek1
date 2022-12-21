@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  background: url(../img/bg.jpg);
+  width: 100%;
+  background-size: cover;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+header div.logo {
+  width: 15%;
+  padding: 2% 8% 0;
+}
+
+header div.logo img {
+  width: 100%;
+}
+
+header div h1 {
+  font-size: 4em;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+header div h2 {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 0 2%;
+  font-family: "Outfit", sans-serif;
+}
+
+main div.container div.inlineBox {
+  display: inline-block;
+  width: 20%;
+  height: 45vh;
+  position: relative;
+}
+
+main div.container div.central {
+  display: inline-block;
+  width: 59%;
+  height: 50vh;
+  position: relative;
+}
+
+main div.container div.central .cake div.color1 {
+  z-index: 2;
+  border: 8vh solid;
+  border-radius: 50%;
+  border-color:#00ffff transparent  #00ffff #00ffff;
+  transform: rotate(-45deg);
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  right: 30%;
+  box-shadow: 0 0 15px black, inset 0 0 10px black;
+}
+
+main div.container div.central .cake div.color2 {
+  z-index: 1;
+  border: 8vh solid;
+  border-radius: 50%;
+  border-color: #d20094 transparent transparent transparent;
+  transform: rotate(-46deg);
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  right: 30%;
+  box-shadow: 0 0 15px black, inset 0 0 10px black;
+}
+
+main div.container div.central .cake div.color3 {
+  z-index: 0;
+  border: 8vh solid;
+  border-radius: 50%;
+  border-color: #00ffff;
+  transform: rotate(-45deg);
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  right: 30%;
+  box-shadow: 0 0 15px black, inset 0 0 10px black;
+}
+
+main div.container div.central div.innerCircle {
+  position: absolute;
+  text-align: center;
+  font-size: 0.8em;
+  top: 65%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  height: 250px;
+  width: 30%;
+}
+
+main div.container div.central div.innerCircle h4.congSubtitle {
+  position: absolute;
+  font-size: 1.2em;
+  right: 37%;
+}
+
+main div.container div.central div.innerCircle span.blue {
+  color: aqua;
+}
+
+main div.container div.central div.innerCircle p {
+  font-size: 0.9em;
+  width: 60%;
+  position: absolute;
+  top: 30%;
+}
+
+main div.container div.inlineBox p.percent {
+  position: absolute;
+  font-size: 3em;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+}
+
+main div.container div.alignLeft p.percent {
+  left: 100%;
+}
+
+main div.container div.inlineBox span.question {
+  font-size: 0.4em;
+  font-weight: 400;
+}
+
+main div.container div.alignLeft {
+  text-align: left;
+}
+
+main div.container div.alignRight {
+  text-align: right;
+}
+
+footer {
+  position: relative;
+  height: 20vh;
+}
+
+footer div.button {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+footer div.button p {
+  border: solid 1px white;
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  padding: 8% 60%;
+}
+
+footer div.button p:hover {
+  box-shadow: 0px 0px 20px #3195e27c;
+}
