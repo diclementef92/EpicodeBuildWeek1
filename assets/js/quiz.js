@@ -134,7 +134,7 @@ window.onload = function () {
   //passaggio alla pagina successiva
   const gotoResultsPage = function () {
     window.location.assign(
-      "./prova.html?correct_answers=" +
+      "./resultPage.html?correct_answers=" +
         answers.correct_answers +
         "&tot_questions=" +
         answers.questions
