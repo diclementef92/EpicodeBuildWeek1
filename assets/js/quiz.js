@@ -134,7 +134,7 @@ window.onload = function () {
   //passaggio alla pagina successiva
   const gotoResultsPage = function () {
     window.location.assign(
-      "./prova.html?correct_answers=" +
+      "./resultPage.html?correct_answers=" +
         answers.correct_answers +
         "&tot_questions=" +
         answers.questions
@@ -147,8 +147,8 @@ window.onload = function () {
 
   const myTimer = function () {
     const timer = document.querySelector(".timer");
-    timer.innerText = counter;
     counter--;
+    timer.innerText = counter;
     //se il timer arriva a 0, se ci sono altre domande vai all domanda successiva e reset timer altrimenti pagina risultati
     if (counter === 0) {
       questionIndex++;
@@ -156,14 +156,12 @@ window.onload = function () {
         //reset Timer
         counter = questionMaxTime;
         newQuestion(questionIndex);
-
-        counter = questionMaxTime;
       } else {
         gotoResultsPage();
       }
     }
   };
-  // window.setInterval(myTimer, 1000);
+  window.setInterval(myTimer, 1000);
 
   //caricamento e visualizzazione domanda (question) e opzioni (options)
   const newQuestion = function (index) {
@@ -171,6 +169,11 @@ window.onload = function () {
     const question = document.querySelector(".titolo");
     const questionText = questions[index].question;
     let options = [];
+
+    // reset timer
+    const timer = document.querySelector(".timer");
+    counter = questionMaxTime;
+    timer.innerText = counter;
 
     if (questions[index].type !== "boolean") {
       options = questions[index].incorrect_answers;
