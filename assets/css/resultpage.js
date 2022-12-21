@@ -47,7 +47,7 @@ const resultsTestConverter = (correct, totalAnswers) => {
   circlePercentAdapter(outPercNeg);
   return 1;
 };
-// console.log(resultsTestConverter(corrette, totaleRisposte));
+console.log(resultsTestConverter(10, 100));
 
 console.log(outPercPos, outPercNeg, didYouPass);
 
