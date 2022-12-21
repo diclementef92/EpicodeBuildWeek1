@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
   background: url(../img/bg.jpg);
   width: 100%;
   background-size: cover;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 span.bold {
@@ -26,7 +26,7 @@ header div h1 {
   text-align: center;
   font-weight: bold;
   margin: 0;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 header div h2 {
@@ -34,7 +34,7 @@ header div h2 {
   text-align: center;
   font-weight: 400;
   margin: 0 0 2%;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 main div.container div.inlineBox {
@@ -51,34 +51,34 @@ main div.container div.central {
   position: relative;
 }
 
-main div.container div.central .cake div.color2 {
-  z-index: 1;
-  border: 8vh solid;
-  border-radius: 50%;
-  border-color: #D20094 #D20094 transparent transparent ;
-  transform:rotate(-30deg);
-  height: 250px;
-  width: 250px;
-  position: absolute;
-  right: 0;
-  border-radius: 50%;
-  right: 30%;
-  box-shadow:0 0 15px black, inset 0 0 10px black;
-}
-
 main div.container div.central .cake div.color1 {
   z-index: 2;
   border: 8vh solid;
   border-radius: 50%;
-  border-color: transparent #00ffff #00ffff transparent;
-  transform:rotate(135deg);
+  border-color:#00ffff transparent  #00ffff #00ffff;
+  transform: rotate(-45deg);
   height: 250px;
   width: 250px;
   position: absolute;
   right: 0;
   border-radius: 50%;
   right: 30%;
-  box-shadow:0 0 15px black, inset 0 0 10px black;
+  box-shadow: 0 0 15px black, inset 0 0 10px black;
+}
+
+main div.container div.central .cake div.color2 {
+  z-index: 1;
+  border: 8vh solid;
+  border-radius: 50%;
+  border-color: #d20094 transparent transparent transparent;
+  transform: rotate(-46deg);
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  right: 30%;
+  box-shadow: 0 0 15px black, inset 0 0 10px black;
 }
 
 main div.container div.central .cake div.color3 {
@@ -86,14 +86,14 @@ main div.container div.central .cake div.color3 {
   border: 8vh solid;
   border-radius: 50%;
   border-color: #00ffff;
-  transform:rotate(135deg);
+  transform: rotate(-45deg);
   height: 250px;
   width: 250px;
   position: absolute;
   right: 0;
   border-radius: 50%;
   right: 30%;
-  box-shadow:0 0 15px black, inset 0 0 10px black;
+  box-shadow: 0 0 15px black, inset 0 0 10px black;
 }
 
 main div.container div.central div.innerCircle {
@@ -119,7 +119,7 @@ main div.container div.central div.innerCircle span.blue {
 
 main div.container div.central div.innerCircle p {
   font-size: 0.9em;
-  width: 60%;  
+  width: 60%;
   position: absolute;
   top: 30%;
 }
