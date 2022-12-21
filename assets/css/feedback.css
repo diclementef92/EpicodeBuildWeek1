@@ -1,0 +1,72 @@
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+.logo {
+  text-align: left;
+  padding-top: 30px;
+  padding-left: 100px;
+  padding-bottom: 50px;
+}
+.logo img {
+  width: 15%;
+}
+.titolo {
+  font-family: "Outfit", sans-serif;
+  font-size: 60px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.sottotitolo {
+  font-weight: normal;
+}
+
+.votazione {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  display: inline-block;
+}
+svg {
+  margin-left: 10px;
+}
+svg path:hover {
+  fill: #00ffff;
+}
+.lumus {
+  fill: #00ffff;
+}
+input {
+  border: none;
+  border-bottom: #d20094 solid 2px;
+  background-color: transparent;
+  color: white;
+  padding-top: 20px;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+::-moz-placeholder {
+  color: gray;
+  opacity: 1;
+}
+
+footer {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+button {
+  font-weight: bold;
+  color: black;
+  background-color: #00ffff;
+  border: none;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+button:hover {
+  box-shadow: #00ffff 0 0 20px;
+}
