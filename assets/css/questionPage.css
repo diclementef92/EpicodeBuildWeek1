@@ -14,12 +14,11 @@ header {
 header .logo {
   margin-top: 20px;
   margin-left: 100px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .logo img {
-  width: 150px;
+  height: 50px;
+  padding-left: 10px;
 }
 .titolo {
   color: white;
@@ -36,9 +35,9 @@ header .logo {
 }
 .timer {
   color: white;
-  padding-top: 20px;
-  padding-right: 40px;
-  /* font-size: 50px; */
+  margin-right: 5%;
+  display: flex;
+  justify-content: right;
 }
 
 /* Container */
@@ -55,6 +54,7 @@ header .logo {
   padding: 40px;
   margin: 20px;
   background-color: rgba(192, 192, 192, 0.1);
+  box-shadow: 5px 5px 5px;
 }
 .option:hover {
   background-color: #d20094;

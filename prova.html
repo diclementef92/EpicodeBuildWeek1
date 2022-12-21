@@ -10,19 +10,21 @@
 
 <body>
     <!-- <img src="https://www.webboh.it/wp-content/uploads/2021/02/donna-tiktok-758x426.jpg" alt="fanelli"> -->
-    <span></span>
+    <span style="color: blueviolet; font-weight: bold; font-size: large;"></span>
 
     <script>
         let params = new URLSearchParams(location.search);
+
+        let correct_answers = params.get("correct_answers");
+        let tot_questions = params.get("tot_questions");
+
+        let span = document.querySelector("span")
+        span.innerText = "risposte corrette: " + correct_answers + " su " + tot_questions;
+
         console.log(params.get("correct_answers"));
+        console.log(params.get("tot_questions"));
 
-        window.setInterval(timer, 1000);
-        let count = 60;
 
-        function timer() {
-            let span = document.querySelector("span")
-            span.innerText = count--;
-        }
     </script>
 </body>
 
