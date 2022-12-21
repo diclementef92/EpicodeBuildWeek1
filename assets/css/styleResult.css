@@ -100,17 +100,19 @@ main div.container div.central div.innerCircle {
   position: absolute;
   text-align: center;
   font-size: 0.8em;
-  top: 65%;
-  left: 56%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 30%;
+
 }
 
 main div.container div.central div.innerCircle h4.congSubtitle {
   position: absolute;
   font-size: 1.2em;
-  right: 37%;
+  right: 20%;
+  top: 15%;
 }
 
 main div.container div.central div.innerCircle span.blue {
@@ -121,7 +123,8 @@ main div.container div.central div.innerCircle p {
   font-size: 0.9em;
   width: 60%;
   position: absolute;
-  top: 30%;
+  top: 50%;
+  right: 25%;
 }
 
 main div.container div.inlineBox p.percent {
