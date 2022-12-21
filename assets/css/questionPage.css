@@ -1,0 +1,76 @@
+/* General */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Outfit:wght@300&display=swap");
+
+body {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Header */
+header {
+  margin-bottom: 50px;
+}
+header .logo {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.logo img {
+  height: 50px;
+  padding-left: 10px;
+}
+.titolo {
+  color: white;
+  font-size: 50px;
+  font-weight: normal;
+  text-align: center;
+  margin: 100px auto 100px auto;
+  font-family: "Outfit", sans-serif;
+  width: 80%;
+}
+
+.titolo span {
+  font-weight: 900;
+}
+.timer {
+  color: white;
+  margin-right: 5%;
+  display: flex;
+  justify-content: right;
+}
+
+/* Container */
+.options {
+  color: white;
+  font-family: "Inter", sans-serif;
+  width: 80%;
+  margin: 10% auto 10% auto;
+}
+.option {
+  text-align: center;
+  border: whitesmoke solid 3px;
+  border-radius: 102px;
+  padding: 40px;
+  margin: 20px;
+  background-color: rgba(192, 192, 192, 0.1);
+  box-shadow: 5px 5px 5px;
+}
+.option:hover {
+  background-color: #d20094;
+}
+
+/* Footer */
+footer {
+  color: white;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: large;
+}
+footer .question-tot {
+  color: #d20094;
+}
+
+/* .stelle i:hover {
+  color: aqua;
+} */
