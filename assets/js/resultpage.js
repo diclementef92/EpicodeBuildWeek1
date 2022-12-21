@@ -1,6 +1,6 @@
 let param = new URLSearchParams(location.search)
 let correct_answers = param.get("correct_answers")
-let questions = param.get("questions")
+let questions = param.get("tot_questions")
 
 let outPercPos = 0; // percentuale risposte positive
 let outPercNeg = 0; // percentuale risposte negative
@@ -35,8 +35,13 @@ const resultsTest = (cor, tot) => {
     didYouPass = true;
   } else if (Math.round(outPercPos) < 60) {
     didYouPass = false;    
-    const failedTest = document.querySelector("innerCircle");
-    // posPercentage.innerText = ;
+    const failedTest = document.querySelector(".innerCircle");
+    failedTest.innerHTML = `<h4 class="congSubtitle">
+              failed test! <br />
+              <span class="blue">you did't pass the exam.</span>
+            </h4>
+            <p>We'll send you the report in few minutes. Check your email (including promotion / spam folder)</p>`;
+
   } else {
     return 0;
   }
@@ -84,7 +89,7 @@ const circlePercentage = (redCircleAmount) => {
 
 //resultsTestConverter(correct_answers, questions);
 //circlePercentage(outPercNeg);
-console.log(resultsTestConverter(correct_answers, questions)); 
+resultsTest(correct_answers, questions); 
 
 
 
