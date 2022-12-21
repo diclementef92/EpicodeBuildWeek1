@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="./page1.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
+    </style>
+    <title>Welcome Page</title>
+  </head>
+  <body>
+    <div class="imgsfondo">
+      <header>
+        <div class="logo">
+          <img class="imglogo" src="../assets/epicode_logo.png" alt="" />
+        </div>
+        <div class="titolo">
+          <h1>
+            <span class="spanTit"> Welcome to</span>
+            <br />
+            your exam
+          </h1>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <h2>Instructions</h2>
+          <p class="parh2">
+            We don't expect most engineers to know the answers to all of these
+            <br />questions, so don't worry if you're unsure of a few of them.
+          </p>
+          <ul>
+            <li>
+              Each question is <span class="lispan">timed</span> and can only be
+              <span class="lispan">answered once.</span>
+            </li>
+            <li>
+              Changing browser tab or opening other windows will
+              <span class="lispan">invalidate the question.</span>
+            </li>
+            <li>
+              This exam will take approx.
+              <span class="lispan">0-5 minutes.</span>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer>
+        <div class="divfooter">
+          <label class="checkbox" for="myCheckboxId">
+            <input
+              checked
+              class="checkbox__input"
+              type="checkbox"
+              name="myCheckboxName"
+              id="myCheckboxId"
+            />
+            <div class="checkbox__box"></div>
+          </label>
+          <p class="parfooter">
+            I promise to answer myself without help from anyone
+          </p>
+          <div class="buttonePR">
+            <button class="bottonefoot">
+              <a class="attacco" href="#"><h3>PROCEED</h3></a>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./Page1.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0ef13b64bd.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
