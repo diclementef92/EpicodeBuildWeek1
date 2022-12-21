@@ -25,16 +25,20 @@ body {
 .sottotitolo {
   font-weight: normal;
 }
+
 .votazione {
   padding-top: 10px;
   padding-bottom: 50px;
   display: inline-block;
 }
-.votazione img {
+svg {
   margin-left: 10px;
 }
-.votazione img:hover {
-  fill: black;
+svg path:hover {
+  fill: #00ffff;
+}
+.lumus {
+  fill: #00ffff;
 }
 input {
   border: none;
