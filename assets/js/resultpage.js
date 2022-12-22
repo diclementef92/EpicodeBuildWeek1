@@ -53,30 +53,42 @@ const resultsTest = (cor, tot) => {
 // console.log(outPercPos, outPercNeg, didYouPass);
 
 const circlePercentage = (redCircleAmount) => {
-  console.log("circlePercentage eseguita");
+  // converto percentuali in gradi di rotazione
+  console.log("circlePercentage eseguita, input della funzione", redCircleAmount);
   let degConv = Math.round(1 - redCircleAmount * 3.6);
+
+// creo i selettori per i cerchi
   const circleAcqua = document.querySelector(".color1");
   const circlePink = document.querySelector(".color2");
   const circleBackground = document.querySelector(".color3");
-  circlePink.style.transform = `rotate(${1 - degConv - 46}deg)`;
 
-  if (outPercNeg <= 25) {
-    console.log(`più di 75% di errori! devi proprio riguardare le slide!! ${outPercNeg}% sbagliate`);
-  } else if (outPercNeg < 50 && outPercNeg >= 25) {
-    console.log(`più di 25, ma meno di 50! bene, ${outPercNeg}% sbagliate`);
+
+  // circlePink.style.transform = `rotate(${1 - degConv - 46}deg)`;
+  // centro e ruoto i cerchi per evitare conflitti con foglio css
+  circlePink.style.transform = `translate(-50%,-50%) rotate(${1 - degConv - 46}deg)`;
+  circlePink.style.top = "50%";
+  circlePink.style.left = "50%";
+  circleAcqua.style.transform = `translate(-50%,-50%) rotate(${- 46}deg)`;
+
+//stabilisco orientamento in base alla percentuale delle risposte giuste
+// lavorando di spicchi ogni 25% bisogna cambiare anche la colorazione e non solo la gradazione
+  if (redCircleAmount <= 25) {
+    console.log(`meno di 25% sbagliate! bravissimo solo ${redCircleAmount}% sbagliate`);
+  } else if (redCircleAmount >= 25 && redCircleAmount < 50) {
+    console.log(`hai sbagliato più del 25% del totale, ma meno del 50%! bene, ${redCircleAmount}% sbagliate`);
     circlePink.style.borderColor = "#d20094 transparent transparent #d20094";
     circleAcqua.style.borderColor = "#00ffff transparent transparent #00ffff";
-  } else if (outPercNeg < 75 && outPercNeg >= 50) {
-    console.log(`più di 50, ma meno di 75! grave insufficienza! ${outPercNeg}% sbagliate`);
-    circlePink.style.borderColor = "#d20094 transparent transparent #d20094";
-    circleAcqua.style.borderColor = "transparent transparent transparent transparent";
-    circleBackground.style.borderColor = "#00ffff #d20094 #d20094 #00ffff";
-  } else if (outPercNeg < 100 && outPercNeg >= 75) {
-    console.log(`meno di 25! bravissimo solo ${outPercNeg}% sbagliate`);
+  } else if (redCircleAmount >= 50 && redCircleAmount < 75) {
+    console.log(`hai sbagliato più del 50%, ma meno di 75%! grave insufficienza! ${redCircleAmount}% sbagliate`);
+    circlePink.style.borderColor = "#d20094 #00ffff transparent #d20094";
+    circleAcqua.style.borderColor = "#00ffff transparent transparent transparent";
+    circleBackground.style.borderColor = "#d20094 #d20094 #d20094 #00ffff";
+  } else if (redCircleAmount >= 75 && redCircleAmount < 100) {
+    console.log(`sono sbagliate più del 75% delle risposte! devi proprio riguardare le slide!! ${redCircleAmount}% sbagliate`);
     circlePink.style.borderColor = "#d20094 transparent #d20094 #d20094";
-    circleAcqua.style.borderColor = "transparent";
-    circleBackground.style.borderColor = "#00ffff #d20094 #d20094 #d20094";
-  } else if ((outPercNeg = 100)) {
+    circleAcqua.style.borderColor = "transparent #d20094 transparent transparent";
+    circleBackground.style.borderColor = "#00ffff";
+  } else if ((redCircleAmount = 100)) {
     console.log(`nessuna risposta giusta, forse c'è stato un errore`);
     circlePink.style.borderColor = "#d20094";
     circleAcqua.style.borderColor = "transparent";
