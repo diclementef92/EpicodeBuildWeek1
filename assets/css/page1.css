@@ -12,6 +12,14 @@ body {
   margin-left: 80px;
   margin-top: 20px;
 }
+#ester_egg {
+  opacity: 0%;
+  padding-left: 550px;
+}
+.fa-cat:before {
+  color: yellow;
+}
+
 .titolo {
   padding-top: 10px;
   font-family: "Outfit", sans-serif;

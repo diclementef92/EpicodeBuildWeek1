@@ -1,8 +1,11 @@
 const attenzione = (e) => {
   let box = document.querySelector(".checkbox__input")
   if (box.checked === false) {
-    alert("ATTENTION! ACCEPT THE TERMS & CONDITIONS TO CONTINUE!")
+    alert("WARNING! ACCEPT THE TERMS & CONDITIONS TO CONTINUE!")
   } else {
     window.location.href = "../../questionPage.html"
   }
+}
+const fatto = (e) => {
+  document.getElementById("ester_egg").style.opacity = "100"
 }
