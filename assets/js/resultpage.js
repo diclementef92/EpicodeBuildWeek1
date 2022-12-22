@@ -63,7 +63,6 @@ const circlePercentage = (redCircleAmount) => {
   const circleBackground = document.querySelector(".color3");
 
 
-  // circlePink.style.transform = `rotate(${1 - degConv - 46}deg)`;
   // centro e ruoto i cerchi per evitare conflitti con foglio css
   circlePink.style.transform = `translate(-50%,-50%) rotate(${1 - degConv - 46}deg)`;
   circlePink.style.top = "50%";
