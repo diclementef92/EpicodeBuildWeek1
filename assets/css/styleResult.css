@@ -55,12 +55,12 @@ main div.central div.color1 {
   z-index: 2;
   border: 6.5vh solid;
   border-radius: 50%;
-  border-color:#00ffff transparent  #00ffff #00ffff;
+  border-color: #00ffff transparent #00ffff #00ffff;
   transform: rotate(-45deg);
   height: 250px;
   width: 250px;
   position: absolute;
-  border-radius: 50%;  
+  border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -76,7 +76,7 @@ main div.central div.color2 {
   height: 250px;
   width: 250px;
   position: absolute;
-  border-radius: 50%;  
+  border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -92,7 +92,7 @@ main div.central div.color3 {
   height: 250px;
   width: 250px;
   position: absolute;
-  border-radius: 50%;  
+  border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -108,7 +108,7 @@ main div.central div.innerCircle {
   transform: translate(-50%, -50%);
   height: 250px;
   width: 40%;
-
+  max-width: 300px;
 }
 
 div.innerCircle h4.congSubtitle {
@@ -168,7 +168,7 @@ footer div.button {
   left: 50%;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  width: 17%
+  width: 17%;
 }
 
 footer div.button p {
