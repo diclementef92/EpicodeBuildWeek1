@@ -153,8 +153,6 @@ window.onload = function () {
     if (counter === 0) {
       questionIndex++;
       if (questionIndex < questions.length) {
-        //reset Timer
-        counter = questionMaxTime;
         newQuestion(questionIndex);
       } else {
         gotoResultsPage();
