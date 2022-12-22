@@ -159,7 +159,7 @@ window.onload = function () {
       }
     }
   };
-  window.setInterval(myTimer, 1000);
+  // window.setInterval(myTimer, 1000);
 
   //caricamento e visualizzazione domanda (question) e opzioni (options)
   const newQuestion = function (index) {

@@ -6,11 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            border: solid red 2px;
+        }
+
+        .child {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+        }
+    </style>
 </head>
 
 <body>
     <!-- <img src="https://www.webboh.it/wp-content/uploads/2021/02/donna-tiktok-758x426.jpg" alt="fanelli"> -->
-    <span style="color: blueviolet; font-weight: bold; font-size: large;"></span>
+
+    <div class="container">
+        <div class="child"></div>
+    </div>
+
+
+
+    <!-- <span  style="color: blueviolet; font-weight: bold; font-size: large;"></span> -->
+
+
 
     <script>
         let params = new URLSearchParams(location.search);
