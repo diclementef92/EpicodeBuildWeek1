@@ -15,12 +15,13 @@ header {
   margin-bottom: 10vh;
 }
 header .logo {
-  margin-left: 8vw;
+  /* margin-left: 8vw; */
 }
 
 header .logo img {
-  height: 50px;
-  margin-top: 4vh;
+  width: 15vw;
+  padding-top: 5vh;
+  padding-left: 8vw;
 }
 .titolo {
   color: white;
