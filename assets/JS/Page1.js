@@ -8,4 +8,8 @@ const attenzione = (e) => {
 }
 const fatto = (e) => {
   document.getElementById("ester_egg").style.opacity = "100"
+  const audio = document.querySelector("audio")
+  audio.src = "./assets/audio/Miagolio gatto.mp3"
+  audio.type = "audio/mp3"
+  audio.play()
 }
