@@ -56,7 +56,7 @@ const resultsTest = (cor, tot) => {
   } else if (Math.round(outPercPos) < 60) {
     didYouPass = false;
     document.querySelector(".lose").src = "./assets/audio/bara.mp3";
-    document.querySelector(".lose").volume = 0.1;
+    document.querySelector(".lose").volume = 0.5;
 
     const easterEggsSel = document.querySelectorAll(".easterEggsLose");
     easterEggsSel.forEach(element =>{
