@@ -198,14 +198,26 @@ footer div.button p:hover {
 
 /* Easter egg section */
 
-.easterEggs {
+.easterEggsWin {
   width: 10%;
   visibility: hidden;
   position: absolute;
   transform: translate(-50%, -50%);
 }
 
-.easterEggs img {
+.easterEggsWin img {
+  width: 100%;
+  height: 18vh;
+}
+
+.easterEggsLose {
+  width: 10%;
+  visibility: hidden;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.easterEggsLose img {
   width: 100%;
   height: 18vh;
 }
@@ -241,6 +253,21 @@ footer div.button p:hover {
 }
 
 #ironMan {
+  top: 85%;
+  left: 80%;
+}
+
+#mbappe {
+  top: 85%;
+  left: 20%;
+}
+
+#fail {
+  top: 20%;
+  left: 80%;
+}
+
+#fail2 {
   top: 85%;
   left: 80%;
 }

@@ -29,7 +29,7 @@ const resultsTest = (cor, tot) => {
     // test passaggio esame + 60%
     // aggiunta immagini
     didYouPass = true;
-    document.querySelector("audio").src = "./assets/audio/RockyTheme.mp3";
+    document.querySelector(".win").src = "./assets/audio/RockyTheme.mp3";
     const easterEggsSel = document.querySelectorAll(".easterEggsWin");
     easterEggsSel.forEach(element =>{
       element.className = ".passedTest";
@@ -37,7 +37,7 @@ const resultsTest = (cor, tot) => {
       element.style.position = "absolute";
       element.style.transform = "translate(-50%, -50%)";
     })
-    const easterEggsImgSel = document.querySelectorAll(".img");
+    const easterEggsImgSel = document.querySelectorAll(".easterEggsWin .img");
     easterEggsImgSel.forEach(element =>{
       element.style.width = "100%";
       element.style.height = "18vh";
@@ -55,12 +55,44 @@ const resultsTest = (cor, tot) => {
 
   } else if (Math.round(outPercPos) < 60) {
     didYouPass = false;
+    document.querySelector(".lose").src = "./assets/audio/bara.mp3";
+    document.querySelector(".lose").volume = 0.1;
+
+    const easterEggsSel = document.querySelectorAll(".easterEggsLose");
+    easterEggsSel.forEach(element =>{
+      element.className = ".notPassedTest";
+      element.style.width = "10%";
+      element.style.position = "absolute";
+      element.style.transform = "translate(-50%, -50%)";
+    })
+    const easterEggsImgSel = document.querySelectorAll(".img");
+    easterEggsImgSel.forEach(element =>{
+      element.style.width = "120%";
+      element.style.height = "20vh";
+    });
+
+    const passedTestSel = document.querySelectorAll(".notPassedTest");
+    passedTestSel.forEach(element => {
+      element.style.visibility = "visible";
+    });
+
+    const innerCirclePhoto = document.querySelector(".innerCircle");
+    innerCirclePhoto.style.backgroundImage = "url(./assets/img/fail1.jpeg)";
+    innerCirclePhoto.style.backgroundSize = "cover";
+    innerCirclePhoto.style.borderRadius = "50%";
+    innerCirclePhoto.style.color = "red";
+    innerCirclePhoto.style.fontWeight = "bold";
+    innerCirclePhoto.style.fontSize = "1em";
+
+
     const failedTest = document.querySelector(".innerCircle");
     failedTest.innerHTML = `<h4 class="congSubtitle">
               failed test! <br />
               <span class="blue">you did't pass the exam.</span>
             </h4>
             <p>We'll send you the report in few minutes. Check your email (including promotion / spam folder)</p>`;
+    const blueAdvise = document.querySelector("div.innerCircle span.blue");
+    blueAdvise.style.color = "darkViolet";
   } else {
     return 0;
   }
