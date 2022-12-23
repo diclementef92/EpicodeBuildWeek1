@@ -37,7 +37,7 @@ const resultsTest = (cor, tot) => {
       element.style.position = "absolute";
       element.style.transform = "translate(-50%, -50%)";
     })
-    const easterEggsImgSel = document.querySelectorAll(".easterEggsWin .img");
+    const easterEggsImgSel = document.querySelectorAll(".img");
     easterEggsImgSel.forEach(element =>{
       element.style.width = "100%";
       element.style.height = "18vh";
