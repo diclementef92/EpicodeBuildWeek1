@@ -7,9 +7,13 @@ const illuminazioneStelle = (event) => {
   for (let i = 0; i < stelle.length; i++) {
     const stella = stelle[i];
     stella.classList.add("lumus");
+    if (i === stelle.length - 1) {
+      borghese();
+    } else {
+      addioBorghese();
+    }
     if (stella === svgClicked) {
       index = i;
-      stella.classList.add("lumus");
       break;
     }
   }
@@ -18,6 +22,7 @@ const illuminazioneStelle = (event) => {
 const borghese = () => {
   const div = document.querySelector(".votazione");
   const gif = document.createElement("img");
+  gif.classList.add("gifBorghese");
   gif.src = "https://64.media.tumblr.com/67d0a611b661efb68e0cfd9396e116b7/tumblr_p2o36oUZIy1tlsda4o1_500.gif";
   gif.alt = "Borghese";
   gif.style.width = "300px";
@@ -26,4 +31,15 @@ const borghese = () => {
   audio.src = "./assets/audio/Alessandro-Borghese.mp3";
   audio.type = "audio/mp3";
   div.appendChild(gif);
+};
+
+const addioBorghese = () => {
+  const gifBorghese = document.querySelector(".gifBorghese");
+  /* const audio = document.querySelector("audio"); */
+  if (gifBorghese !== null) {
+    gifBorghese.remove();
+  }
+  /* if (audio !== null) {
+    audio.remove();
+  } */
 };
