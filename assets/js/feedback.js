@@ -35,6 +35,11 @@ const borghese = () => {
 
 const addioBorghese = () => {
   const gifBorghese = document.querySelector(".gifBorghese");
-  /*  const audioBorghese = document.querySelector("audio"); */
-  borghese.remove();
+  /* const audio = document.querySelector("audio"); */
+  if (gifBorghese !== null) {
+    gifBorghese.remove();
+  }
+  /* if (audio !== null) {
+    audio.remove();
+  } */
 };
