@@ -154,8 +154,7 @@ window.onload = function () {
     container.remove();
     footer.remove();
 
-    image.src =
-      "https://www.webboh.it/wp-content/uploads/2021/02/donna-tiktok-758x426.jpg";
+    image.src = "./assets/img/donna-tiktok-758x426.webp";
 
     main.style = "text-align: center;";
     main.appendChild(image);
@@ -177,6 +176,7 @@ window.onload = function () {
       if (questionIndex < questions.length) {
         newQuestion(questionIndex);
       } else {
+        counter = questionMaxTime;
         loadingResults();
         window.setTimeout(gotoResultsPage, 10000);
       }
@@ -238,6 +238,7 @@ window.onload = function () {
     } else {
       //altrimenti
       console.log(answers);
+      counter = questionMaxTime;
       loadingResults();
       window.setTimeout(gotoResultsPage, 10000);
     }
