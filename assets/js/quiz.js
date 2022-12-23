@@ -140,7 +140,28 @@ window.onload = function () {
         answers.questions
     );
   };
+  //rimuove contenuto pagina e carica immagine
+  const loadingResults = function () {
+    let container = document.querySelector(".container");
+    let footer = document.querySelector("footer");
+    let main = document.querySelector("main");
+    let image = document.createElement("img");
+    let text = document.createElement("p");
+    text.classList.add("titolo");
+    text.innerHTML =
+      "ATTENDI!<br>Non avere fretta stiamo caricando i risultati -🎅🤶";
 
+    container.remove();
+    footer.remove();
+
+    image.src = "./assets/img/donna-tiktok-758x426.webp";
+
+    main.style = "text-align: center;";
+    main.appendChild(image);
+    main.appendChild(text);
+
+    // container.childNodes.forEach((e) => e.remove());
+  };
   //set timer
   let questionMaxTime = 10;
   let counter = questionMaxTime;
@@ -155,11 +176,13 @@ window.onload = function () {
       if (questionIndex < questions.length) {
         newQuestion(questionIndex);
       } else {
-        gotoResultsPage();
+        counter = questionMaxTime;
+        loadingResults();
+        window.setTimeout(gotoResultsPage, 10000);
       }
     }
   };
-  // window.setInterval(myTimer, 1000);
+  window.setInterval(myTimer, 1000);
 
   //caricamento e visualizzazione domanda (question) e opzioni (options)
   const newQuestion = function (index) {
@@ -214,8 +237,10 @@ window.onload = function () {
       newQuestion(questionIndex);
     } else {
       //altrimenti
-      gotoResultsPage();
       console.log(answers);
+      counter = questionMaxTime;
+      loadingResults();
+      window.setTimeout(gotoResultsPage, 10000);
     }
   };
   newQuestion(0);
