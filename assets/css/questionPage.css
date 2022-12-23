@@ -14,9 +14,6 @@ body {
 header {
   margin-bottom: 10vh;
 }
-header .logo {
-  /* margin-left: 8vw; */
-}
 
 header .logo img {
   width: 15vw;
@@ -36,13 +33,47 @@ header .logo img {
 .titolo span {
   font-weight: 900;
 }
+/* timer */
 .timer {
   color: white;
-  margin-right: 5%;
   position: absolute;
-  right: 2vw;
+  top: 10vh;
+  right: 7vw;
   font-family: "Outfit", sans-serif;
   font-size: 3em;
+}
+.timer-bar {
+  width: 100px;
+  height: 5px;
+  position: absolute;
+  top: 16vh;
+  right: 7vw;
+  background-color: rgba(0, 110, 255, 0.919);
+}
+.timer-bar.animation {
+  animation-name: example;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0% {
+    width: 100px;
+  }
+  25% {
+    width: 75px;
+  }
+  50% {
+    width: 50px;
+  }
+  75% {
+    width: 25px;
+    background-color: rgb(255, 123, 0);
+  }
+  100% {
+    width: 0px;
+    background-color: red;
+  }
 }
 
 /* Container */
