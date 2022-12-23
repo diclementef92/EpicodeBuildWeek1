@@ -159,8 +159,6 @@ window.onload = function () {
     main.style = "text-align: center;";
     main.appendChild(image);
     main.appendChild(text);
-
-    // container.childNodes.forEach((e) => e.remove());
   };
   //set timer
   let questionMaxTime = 10;
@@ -177,6 +175,12 @@ window.onload = function () {
         newQuestion(questionIndex);
       } else {
         counter = questionMaxTime;
+        //reset timer bar
+        let timerBar = document.querySelector(".timer-bar");
+        timerBar.classList.remove("animation");
+        timerBar.offsetWidth;
+        timerBar.classList.add("animation");
+        //
         loadingResults();
         window.setTimeout(gotoResultsPage, 10000);
       }
@@ -195,6 +199,12 @@ window.onload = function () {
     const timer = document.querySelector(".timer");
     counter = questionMaxTime;
     timer.innerText = counter;
+    //reset timer bar
+    let timerBar = document.querySelector(".timer-bar");
+    timerBar.classList.remove("animation");
+    timerBar.offsetWidth;
+    timerBar.classList.add("animation");
+    //
 
     if (questions[index].type !== "boolean") {
       options = questions[index].incorrect_answers;
