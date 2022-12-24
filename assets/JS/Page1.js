@@ -3,7 +3,7 @@ const attenzione = (e) => {
   if (box.checked === false) {
     alert("WARNING! ACCEPT THE TERMS & CONDITIONS TO CONTINUE!")
   } else {
-    window.location.href = "../../questionPage.html"
+    window.location.href = "./questionPage.html"
   }
 }
 const fatto = (e) => {
